@@ -2,7 +2,8 @@
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
-// const router = require('./controllers');
+const router = require('./controllers');
+// require('env2')('config.env');
 
 const app = express();
 
@@ -16,6 +17,6 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.set('port', process.env.PORT || 4000);
 
-// app.use(router);
+app.use(router);
 
 module.exports = app;
