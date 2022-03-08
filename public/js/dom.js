@@ -34,13 +34,13 @@ closePopupButton.addEventListener('click', () => {
 });
 
 // Add recipe to main page when click save
-saveButton.addEventListener('click', () => {
-  creatRecipe(inputRecipeName.value, inputIngreatents.value, inputDirection.value);
-  popupFrom.classList.remove('show-popup');
-  inputRecipeName.value = '';
-  inputIngreatents.value = '';
-  inputDirection.value = '';
-});
+// saveButton.addEventListener('click', () => {
+//   creatRecipe(inputRecipeName.value, inputIngreatents.value, inputDirection.value);
+//   popupFrom.classList.remove('show-popup');
+//   inputRecipeName.value = '';
+//   inputIngreatents.value = '';
+//   inputDirection.value = '';
+// });
 
 // collapse recipe
 document.addEventListener('click', (element) => {
@@ -55,3 +55,11 @@ document.addEventListener('click', (element) => {
     element.path[1].remove();
   }
 });
+
+fetch('/recipes')
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((e) => {
+      creatRecipe(e.recipe_name, e.ingredients, e.directions);
+    });
+  });

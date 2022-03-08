@@ -3,7 +3,7 @@
 /* eslint-disable no-undef */
 const creatRecipe = (name, ingredients, directions) => {
   const recipeDiv = createElement('div', '', 'class', 'recipe');
-  const recipeName = createElement('h2', name, 'class', 'recipe-name');
+  const recipeName = createElement('h2', name.charAt(0).toUpperCase() + name.slice(1), 'class', 'recipe-name');
   const showSpanBtn = createElement('span', 'arrow_drop_down', 'class', 'material-icons show-btn');
   recipeName.appendChild(showSpanBtn);
   const ingredientsP = createElement('p', `${ingredients}`, 'class', 'ingredients-content');
