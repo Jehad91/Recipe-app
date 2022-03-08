@@ -4,15 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Foots -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Barriecito&family=Nunito+Sans:wght@200&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- CSS Style File -->
     <link rel="stylesheet" href="css/style.css">
     <title>Recipe</title>
 </head>
 <body>
+    <div class="main">
+        <div class="container">
+            <button id="add-recipe">Add Recipe</button>
+            <div class="popup-form-overlay">
+                <div class="popup-form">
+                    <h3>Add Recipe <span class="close-span">&#x2716;</span></h3>
+                    <form class="form">
+                        <label for="recipe">Recipe Name</label>
+                        <input type="text" id="input-recipe-name" name="input-recipe-name" class="input-recipe-name" placeholder="Recipe Name">
+                        <label for="ingreatents">Ingreatents</label>
+                        <input type="text" name="input-ingreatents" id="input-ingreatents" placeholder="Enter ingreatents">
+                        <label for="direction">Directions</label>
+                        <textarea name="input-direction" id="input-direction" placeholder="Write Directions"></textarea>
+                    </form>
+                    <div class="buttons">
+                        <button class="close-btn">Close</button>
+                        <button class="save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-container">
+                <!-- <div class="recipe">
+                    <h2 class = "recipe-name">Pizza <span class="show-btn">&#9660;</span></h2>
+                    <p><strong>ingredients: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sint molestias vitae nesciunt maxime sit ipsam deserunt maiores mollitia repellat in saepe hic cum, deleniti, explicabo adipisci autem ab perspiciatis?</p>
+                    <p><strong>Directions: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sint molestias vitae nesciunt maxime sit ipsam deserunt maiores mollitia repellat in saepe hic cum, deleniti, explicabo adipisci autem ab perspiciatis?</p>
+                    <button class="edit-btn">Edit</button>
+                    <button class="remove-btn">Remove</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="js/createElement.js"></script>
+    <script src="js/createRecipe.js"></script>
     <script src="js/dom.js"></script>
 </body>
 </html>

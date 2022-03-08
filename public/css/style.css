@@ -1,6 +1,194 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+}
+.main {
+  background: url("../img/background.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 30px 15px;
+}
+/* Pop Up Form Style */
+.popup-form-overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: 0.5s ease-in-out;
+}
+.show-popup {
+  transform: scale(1);
+}
+.popup-form-overlay .popup-form {
+  background-color: #74b9ff;
+  padding: 16px;
+  border-radius: 10px;
+  color: white;
+  background-color: #74b9ff;
+  padding: 16px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-form-overlay .popup-form h3 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  margin-bottom: 24px;
+  padding: 8px 0;
+}
+.popup-form-overlay .popup-form h3 span {
+  cursor: pointer;
+}
+.popup-form-overlay .popup-form .form {
+  display: flex;
+  flex-direction: column;
+}
+.popup-form-overlay .popup-form .form label {
+  margin-bottom: 6px;
+}
+.popup-form-overlay .popup-form .form input,
+.popup-form-overlay .popup-form .form textarea {
+  border: 0;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  resize: none;
+  outline: none;
+}
+.popup-form-overlay .popup-form .form textarea {
+  min-height: 100px;
+}
+.popup-form-overlay .popup-form .form .tag-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.popup-form-overlay .popup-form .form .tag-container .tag {
+  padding: 5px 7px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #ff4d4d;
+  font-size: 15px;
+  justify-content: space-between;
+  min-width: 60px;
+}
+.popup-form-overlay .popup-form .form .close-tag {
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 10px;
+}
+.popup-form-overlay .popup-form .form .tag-container input {
+  flex: 100%;
+}
+.popup-form-overlay .popup-form .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+.popup-form-overlay .popup-form .buttons button {
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+.popup-form-overlay .popup-form .buttons button:first-child {
+  background-color: #0984e3;
+}
+.popup-form-overlay .popup-form .buttons button:last-child {
+  background-color: #d63031;
+}
+/* Main Button For Adding Recipe*/
+#add-recipe {
+  background-color: #233863;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+/* Recipe Added Section Style */
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.recipe-container .recipe {
+  background-color: #dfe6e9b8;
+  padding: 15px;
+  border-radius: 8px;
+  max-height: 80px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  transform-origin: top left;
+}
+.show {
+  max-height: 300px !important;
+}
+.recipe-container h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #ed7d2b;
+}
+.recipe-container h2 .show-btn {
+  background-color: #f1f1f1;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4e4846;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.recipe-container p,
+.recipe-container pre {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  display: flex;
+  gap: 10px;
+  color: #888;
+  color: #555;
+  font-weight: 600;
+}
+.recipe-container p strong,
+.recipe-container pre strong {
+  color: black;
+}
+.recipe-container .material-icons {
+  margin: 12px;
+  cursor: pointer;
+}
+.recipe-container span.edit {
+  color: #2d3436;
+}
+.recipe-container span.delete {
+  color: red;
 }
