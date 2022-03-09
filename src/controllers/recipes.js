@@ -10,7 +10,6 @@ const getRecipes = (req, res) => {
 
 const addRecipes = (req, res) => {
   const { recipeNameInput, ingreatentsInput, directionsInput } = req.body;
-  console.log(recipeNameInput, ingreatentsInput, directionsInput);
   postData(recipeNameInput, ingreatentsInput, directionsInput)
     .then(() => res.redirect('/'))
     .catch((err) => console.log('err:', err));

@@ -48,18 +48,3 @@ document.addEventListener('click', (element) => {
     element.path[2].classList.toggle('show');
   }
 });
-
-// delete recipe
-document.addEventListener('click', (element) => {
-  if (element.target.classList.contains('delete')) {
-    element.path[1].remove();
-  }
-});
-
-fetch('/recipes')
-  .then((res) => res.json())
-  .then((data) => {
-    data.forEach((e) => {
-      creatRecipe(e.recipe_name, e.ingredients, e.directions);
-    });
-  });

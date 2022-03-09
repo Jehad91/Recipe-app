@@ -12,8 +12,7 @@ const creatRecipe = (name, ingredients, directions) => {
   const directionsP = createElement('pre', `${directions}`, 'class', 'directions-content');
   const directionTitle = createElement('strong', 'Directions: ', 'class', 'bold-title');
   directionsP.prepend(directionTitle);
-  const editButton = createElement('span', 'edit', 'class', 'material-icons edit');
   const removeButton = createElement('span', 'delete', 'class', 'material-icons delete');
-  recipeDiv.append(recipeName, ingredientsP, directionsP, editButton, removeButton);
+  recipeDiv.append(recipeName, ingredientsP, directionsP, removeButton);
   recipeContainer.prepend(recipeDiv);
 };
