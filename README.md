@@ -1,8 +1,6 @@
-# Recipe-app
+# :hamburger: Recipe-app
 
 A simple website to add your favorite recipe
-
-# :hamburger: Dream_team
 
 - [Description](#Description)
 - [Links](#Links)
