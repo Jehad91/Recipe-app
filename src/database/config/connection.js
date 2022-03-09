@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const connection = new Pool({
-  connectionString: process.env.DB_URL,
+  connectionString: DB_URL,
   ssl: { rejectUnauthorized: false },
 });
 
