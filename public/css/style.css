@@ -140,7 +140,7 @@
   transform-origin: top left;
 }
 .show {
-  max-height: 500px !important;
+  max-height: 600px !important;
 }
 .recipe-name-container {
   display: flex;
