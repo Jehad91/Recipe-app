@@ -11,7 +11,7 @@ const creatRecipe = (name, ingredients, directions, chefName, chefCountry) => {
   const ingredientsP = createElement('p', `${ingredients}`, 'class', 'ingredients-content');
   const ingredientsTitle = createElement('strong', 'Ingredients: ', 'class', 'bold-title');
   ingredientsP.prepend(ingredientsTitle);
-  const directionsP = createElement('p', `${directions}`, 'class', 'directions-content');
+  const directionsP = createElement('pre', `${directions}`, 'class', 'directions-content');
   const directionTitle = createElement('strong', 'Directions: ', 'class', 'bold-title');
   directionsP.prepend(directionTitle);
   const chefNameh = createElement('h5', `Chef ${chefName}  `, 'class', 'chef-name');
