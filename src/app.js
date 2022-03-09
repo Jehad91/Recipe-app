@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const router = require('./controllers');
-// require('env2')('config.env');
+require('env2')('config.env');
 
 const app = express();
 

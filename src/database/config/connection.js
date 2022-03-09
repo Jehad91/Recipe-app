@@ -2,13 +2,20 @@
 require('env2')('config.env');
 const { Pool } = require('pg');
 
-if (!process.env.DB_URL) {
-  throw new Error('DB URL DOSE NOT EXIST');
+let DB_URL = '';
+if (process.env.NODE_ENV === 'production') {
+  DB_URL = process.env.DATABASE_URL;
+} else if (process.env.NODE_ENV === 'development') {
+  DB_URL = process.env.DB_URL;
+} else if (process.env.NODE_ENV === 'test') {
+  DB_URL = process.env.DB_TESTING_URL;
+} else {
+  throw new Error('DB_URL NOT FOUND!');
 }
 
 const connection = new Pool({
-  connectionString: process.env.DB_URL,
-  ssl: false,
+  connectionString: DB_URL,
+  ssl: { rejectUnauthorized: false },
 });
 
 module.exports = connection;
