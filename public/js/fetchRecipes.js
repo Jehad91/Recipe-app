@@ -14,10 +14,10 @@ const deleteRecipe = (id) => fetch(`/delete-recipe/${id}`, {
 fetch('/recipes')
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((e) => {
-      creatRecipe(e.recipe_name, e.ingredients, e.directions);
+    data.forEach((el) => {
+      creatRecipe(el.recipe_name, el.ingredients, el.directions, el.chef_name, el.chef_country);
       document.querySelector('.delete').onclick = () => {
-        deleteRecipe(e.id)
+        deleteRecipe(el.id)
           .then(() => {
             window.location = '/';
           });
