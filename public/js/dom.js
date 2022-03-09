@@ -33,15 +33,6 @@ closePopupButton.addEventListener('click', () => {
   inputDirection.value = '';
 });
 
-// Add recipe to main page when click save
-// saveButton.addEventListener('click', () => {
-//   creatRecipe(inputRecipeName.value, inputIngreatents.value, inputDirection.value);
-//   popupFrom.classList.remove('show-popup');
-//   inputRecipeName.value = '';
-//   inputIngreatents.value = '';
-//   inputDirection.value = '';
-// });
-
 // collapse recipe
 document.addEventListener('click', (element) => {
   if (element.target.classList.contains('show-btn')) {

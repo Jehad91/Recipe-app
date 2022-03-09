@@ -12,7 +12,7 @@
   min-height: 100vh;
 }
 .container {
-  width: 70%;
+  max-width: 700px;
   margin: auto;
   padding: 30px 15px;
 }
@@ -26,6 +26,7 @@
   left: 0;
   transform: scale(0);
   transition: 0.5s ease-in-out;
+  z-index: 999;
 }
 .show-popup {
   transform: scale(1);
@@ -67,41 +68,32 @@
   border: 0;
   padding: 12px;
   border-radius: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   resize: none;
   outline: none;
 }
 .popup-form-overlay .popup-form .form textarea {
   min-height: 100px;
 }
-.popup-form-overlay .popup-form .form .tag-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.popup-form-overlay .popup-form .form .tag-container .tag {
-  padding: 5px 7px;
-  margin: 5px;
-  display: flex;
-  align-items: center;
+.popup-form-overlay .popup-form .form select {
+  outline: none;
+  border: 0;
+  padding: 5px;
   border-radius: 5px;
-  background-color: #ff4d4d;
-  font-size: 15px;
-  justify-content: space-between;
-  min-width: 60px;
 }
-.popup-form-overlay .popup-form .form .close-tag {
-  cursor: pointer;
-  margin-left: 5px;
-  font-size: 10px;
+.flag-icon {
+  z-index: 1;
 }
-.popup-form-overlay .popup-form .form .tag-container input {
-  flex: 100%;
+.chef-name {
+  color: #1d2a68;
+  text-align: center;
 }
 .popup-form-overlay .popup-form .buttons {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 10px;
+  margin-top: 20px;
 }
 .popup-form-overlay .popup-form .buttons button {
   border: none;
@@ -148,16 +140,18 @@
   transform-origin: top left;
 }
 .show {
-  max-height: 300px !important;
+  max-height: 500px !important;
 }
-.recipe-container h2 {
+.recipe-name-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+}
+.recipe-container h2 {
   color: #ed7d2b;
 }
-.recipe-container h2 .show-btn {
+.recipe-container .show-btn {
   background-color: #f1f1f1;
   width: 26px;
   height: 26px;
@@ -168,13 +162,11 @@
   border-radius: 7px;
   cursor: pointer;
 }
-.recipe-container p,
-.recipe-container pre {
+.recipe-container p {
   margin-bottom: 15px;
   line-height: 1.5;
   display: flex;
   gap: 10px;
-  color: #888;
   color: #555;
   font-weight: 600;
 }
@@ -191,4 +183,6 @@
 }
 .recipe-container span.delete {
   color: red;
+  display: flex;
+  justify-content: end;
 }

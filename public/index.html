@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Barriecito&family=Nunito+Sans:wght@200&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/flag-icon.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Recipe</title>
 </head>
@@ -20,11 +21,13 @@
                     <h3>Add Recipe <span class="close-span">&#x2716;</span></h3>
                     <form class="form" action="/create-recipe" method="post">
                         <label for="recipe">Recipe Name</label>
-                        <input type="text" id="input-recipe-name" name="recipeNameInput" class="input-recipe-name" placeholder="Recipe Name">
+                        <input type="text" id="input-recipe-name" name="recipeNameInput" class="input-recipe-name" placeholder="Recipe Name" required>
                         <label for="ingreatents">Ingreatents</label>
-                        <input type="text" name="ingreatentsInput" id="input-ingreatents" placeholder="Enter ingreatents">
+                        <input type="text" name="ingreatentsInput" id="input-ingreatents" placeholder="Enter ingreatents" required>
                         <label for="direction">Directions</label>
-                        <textarea name="directionsInput" id="input-direction" placeholder="Write Directions"></textarea>
+                        <textarea name="directionsInput" id="input-direction" placeholder="Write Directions" required></textarea>
+                        <label for="chefs">Chefs</label>
+                        <select name="chefsId" id="select-chef"></select>
                         <div class="buttons">
                             <button class="close-btn">Close</button>
                             <button class="save-btn" type="submit">Save</button>
@@ -45,7 +48,8 @@
     </div>
     <script src="js/createElement.js"></script>
     <script src="js/createRecipe.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/allChefs.js"></script>
+    <script src="js/fetchRecipes.js"></script>
     <script src="js/dom.js"></script>
 </body>
 </html>
