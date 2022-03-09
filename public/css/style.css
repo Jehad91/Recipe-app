@@ -162,13 +162,17 @@
   border-radius: 7px;
   cursor: pointer;
 }
-.recipe-container p {
+.recipe-container p,
+.recipe-container pre {
   margin-bottom: 15px;
   line-height: 1.5;
   display: flex;
   gap: 10px;
   color: #555;
   font-weight: 600;
+}
+.recipe-container pre {
+  white-space: pre-wrap;
 }
 .recipe-container p strong,
 .recipe-container pre strong {
